@@ -32,8 +32,14 @@ function AddStudent() {
         const new_student = {
             //   id: shortid.generate(),
             name: name,
-            phone: phone,
             email: email,
+            gender: gender,
+            class: class_,
+            street: street,
+            state: state,
+            zip: zip,
+            phone: phone,
+            birthdate: birthdate
         };
         dispatch(addStudent(new_student));
         history.push("/students");
@@ -44,8 +50,9 @@ function AddStudent() {
             <FormLayout
                 title="Add new student"
                 mystyle={mystyle}
-                name={name} email={email} birthdate={birthdate} class={class_} phone={phone} street={street} state={state} city={city} zip={zip}
-                setName={setName} setEmail={setEmail} setPhone={setPhone} setCity={setCity} setGender={setGender}
+                // path="/students"
+                name={name} email={email} birthdate={birthdate} class={class_} phone={phone} street={street} state={state} city={city} zip={zip} 
+                setName={setName} setEmail={setEmail} setPhone={setPhone} setCity={setCity} setGender={setGender} setClass={setClass}
                 setBirthdate={setBirthdate} setState={setState} setZip={setZip} setStreet={setStreet}
                 setName={setName}
 
@@ -122,8 +129,9 @@ function EditStudent() {
             <div className="card border-0 shadow">
                 <FormLayout
                 mystyle={mystyle}
+                path="/students"
                     handleChange={handleChange} updateData={updateData}
-                    setName={setName} setEmail={setEmail} setPhone={setPhone} setCity={setCity} setGender={setGender}
+                    setName={setName} setEmail={setEmail} setPhone={setPhone} setCity={setCity} setGender={setGender} setClass={setClass}
                     setBirthdate={setBirthdate} setState={setState} setZip={setZip} setStreet={setStreet}
                     title="Edit student data" name={name} email={email} birthdate={birthdate} class={class_} phone={phone} street={street} state={state} city={city} zip={zip} action="Update"
                 />

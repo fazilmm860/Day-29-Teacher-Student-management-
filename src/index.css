@@ -147,6 +147,9 @@ button {
 button:hover {
 	cursor: pointer;
 }
+.cursor{
+	cursor: pointer;
+}
 
 iframe {
 	border: none !important;

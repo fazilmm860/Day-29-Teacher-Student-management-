@@ -22,7 +22,7 @@ const Login = () => {
 						Admin
 					</a>
 							{/* to="/my-details/Isaac%20Bowen" */}
-							<div className="btn-google m-b-20" onClick={() => { setModalIsOpen(true) }}>
+							<div className="btn-google m-b-20 cursor" onClick={() => { setModalIsOpen(true) }}>
 								<i className="fas fa-user-graduate"></i>
 						Student
 					</div>

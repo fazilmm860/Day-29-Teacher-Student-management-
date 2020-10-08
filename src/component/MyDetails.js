@@ -5,10 +5,12 @@ import { useParams } from "react-router-dom";
 import '../component/css/form.css'
 import FormLayout from './FormLayout'
 import Moment from 'moment';
-import { getstudent}from "../actions/studentAction";
+import { getstudent } from "../actions/studentAction";
 
 function MyDetails() {
-    
+    const mystyle2 = {
+        visibility: "hidden"
+    };
     let { id } = useParams();
     const dispatch = useDispatch();
     let history = useHistory();
@@ -64,19 +66,19 @@ function MyDetails() {
 
         history.push("/students")
     }
-return (
-    <>
-     <div className="card border-0 shadow">
+    return (
+        <>
+            <div className="card border-0 shadow">
                 <FormLayout
-                
-                    handleChange={handleChange} updateData={updateData}
-                    setName={setName} setEmail={setEmail} setPhone={setPhone} setCity={setCity} setGender={setGender}
+                    path="/"
+                    handleChange={handleChange} updateData={updateData} mystyle2={mystyle2}
+                    setName={setName} setEmail={setEmail} setPhone={setPhone} setCity={setCity} setGender={setGender} setClass={setClass}
                     setBirthdate={setBirthdate} setState={setState} setZip={setZip} setStreet={setStreet}
                     title="Edit student data" name={name} email={email} birthdate={birthdate} class={class_} phone={phone} street={street} state={state} city={city} zip={zip} action="Update"
                 />
             </div>
-    </>
-);
+        </>
+    );
 
 }
 export default MyDetails;

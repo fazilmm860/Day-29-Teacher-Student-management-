@@ -47,7 +47,7 @@ const StudentList = (student) => {
               <td key={{i}}>{student.gender}</td>
               <td key={{i}}>{student.class}</td>
               <td key={{i}}>{student.birthdate}</td>
-              <td key={{i}}>{student.street},{student.city},{student.state},{student.country},{student.zip}</td>
+              <td key={{i}}>{student.street},{student.city} {student.state} {student.country} {student.zip}</td>
               <td key={{i}}>{student.email}</td>
               <td key={{i}}>{student.phone}</td>
               <td ><Link to={`/edit-student/${student.name}`}><button onClick={student} className="btn btn-dark">Edit</button></Link></td>
