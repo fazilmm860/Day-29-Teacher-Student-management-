@@ -5,7 +5,7 @@ const Login = () => {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [name, setName] = useState("")
 	const [isStudent, handleRoles] = useState("")
-	
+
 	return (
 		<>
 			<div className="limiter">
@@ -14,18 +14,18 @@ const Login = () => {
 					<div className="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 						<form className="login100-form validate-form flex-sb flex-w">
 							<span className="login100-form-title p-b-53">
-								Sign In As
-					</span>
+								HomePage
+							</span>
 
 							<a href="/students" className="btn-face m-b-20">
 								<i className="fas fa-users-cog"></i>
-						Admin
-					</a>
+								Teacher
+							</a>
 							{/* to="/my-details/Isaac%20Bowen" */}
 							<div className="btn-google m-b-20 cursor" onClick={() => { setModalIsOpen(true) }}>
 								<i className="fas fa-user-graduate"></i>
-						Student
-					</div>
+								Student Details
+							</div>
 							{/* <div >
 								<div className="p-t-31 p-b-9" >
 									<span className="txt1"  >
@@ -82,7 +82,7 @@ const Login = () => {
 									</div>
 									<div className="modal-body">
 										<div className="wrap-input100 validate-input" data-validate="Username is required">
-											<input className="input100" type="text" name="username" placeholder="enter student name" value={name} onChange={(e) => setName(e.target.value)}/>
+											<input className="input100" type="text" name="username" placeholder="enter student name" value={name} onChange={(e) => setName(e.target.value)} />
 											<span className="focus-input100"></span>
 										</div>
 										<small>*Name should be exactly same as per records</small>

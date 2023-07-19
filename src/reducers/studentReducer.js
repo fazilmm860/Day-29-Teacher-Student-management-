@@ -19,7 +19,7 @@ export const studentReducer = (state = intialState, action) => {
       }
     case GET_STUDENT:
       let arr = state.students.filter(
-        (student) => student.name == action.payload
+        (student) => student.name === action.payload
       );
       arr = arr.values();
       for (let val of arr) {
